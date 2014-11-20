@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -335,7 +335,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="UG-2864HSWEG01" prefix="U" uservalue="yes">
+<deviceset name="UG-2864HSWEG01" prefix="OLED" uservalue="yes">
 <description>UG-2864HSWEG01 OLED display
 &lt;p&gt;Both 1.3" and 0.96" models share the same FPC tab footprint, only the screen dimensions vary.&lt;/p&gt;</description>
 <gates>
@@ -459,27 +459,6 @@ This library includes capacitors, inductors, resistors, fuses, beads, potentiome
 <pad name="2" x="2.54" y="0" drill="0.8128"/>
 <text x="-3.81" y="3.175" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
 </package>
-<package name="CAP-025X050">
-<wire x1="-2.159" y1="1.27" x2="2.159" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="2.159" y1="-1.27" x2="-2.159" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="2.413" y2="-1.016" width="0.2032" layer="21"/>
-<wire x1="-2.413" y1="1.016" x2="-2.413" y2="-1.016" width="0.2032" layer="21"/>
-<wire x1="2.159" y1="1.27" x2="2.413" y2="1.016" width="0.2032" layer="21" curve="-90"/>
-<wire x1="-2.413" y1="1.016" x2="-2.159" y2="1.27" width="0.2032" layer="21" curve="-90"/>
-<wire x1="2.159" y1="-1.27" x2="2.413" y2="-1.016" width="0.2032" layer="21" curve="90"/>
-<wire x1="-2.413" y1="-1.016" x2="-2.159" y2="-1.27" width="0.2032" layer="21" curve="90"/>
-<wire x1="0.762" y1="0" x2="0.381" y2="0" width="0.2032" layer="51"/>
-<wire x1="0.381" y1="0" x2="0.254" y2="0" width="0.1524" layer="21"/>
-<wire x1="0.254" y1="0" x2="0.254" y2="0.762" width="0.254" layer="21"/>
-<wire x1="0.254" y1="0" x2="0.254" y2="-0.762" width="0.254" layer="21"/>
-<wire x1="-0.254" y1="0.762" x2="-0.254" y2="0" width="0.254" layer="21"/>
-<wire x1="-0.254" y1="0" x2="-0.254" y2="-0.762" width="0.254" layer="21"/>
-<wire x1="-0.254" y1="0" x2="-0.381" y2="0" width="0.1524" layer="21"/>
-<wire x1="-0.381" y1="0" x2="-0.762" y2="0" width="0.2032" layer="51"/>
-<pad name="1" x="-1.27" y="0" drill="0.8128" diameter="1.6764"/>
-<pad name="2" x="1.27" y="0" drill="0.8128" diameter="1.6764"/>
-<text x="-2.54" y="1.27" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
-</package>
 <package name="CAP-0402">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;&lt;p&gt;
 chip</description>
@@ -556,6 +535,27 @@ chip</description>
 <wire x1="-0.5" y1="-0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
 <rectangle x1="-1" y1="-0.6762" x2="-0.45" y2="0.6762" layer="51"/>
 <rectangle x1="0.45" y1="-0.6762" x2="1" y2="0.6762" layer="51"/>
+</package>
+<package name="CAP-025X050">
+<wire x1="-2.159" y1="1.27" x2="2.159" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="2.159" y1="-1.27" x2="-2.159" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="2.413" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="-2.413" y1="1.016" x2="-2.413" y2="-1.016" width="0.2032" layer="21"/>
+<wire x1="2.159" y1="1.27" x2="2.413" y2="1.016" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-2.413" y1="1.016" x2="-2.159" y2="1.27" width="0.2032" layer="21" curve="-90"/>
+<wire x1="2.159" y1="-1.27" x2="2.413" y2="-1.016" width="0.2032" layer="21" curve="90"/>
+<wire x1="-2.413" y1="-1.016" x2="-2.159" y2="-1.27" width="0.2032" layer="21" curve="90"/>
+<wire x1="0.762" y1="0" x2="0.381" y2="0" width="0.2032" layer="51"/>
+<wire x1="0.381" y1="0" x2="0.254" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.254" y1="0" x2="0.254" y2="0.762" width="0.254" layer="21"/>
+<wire x1="0.254" y1="0" x2="0.254" y2="-0.762" width="0.254" layer="21"/>
+<wire x1="-0.254" y1="0.762" x2="-0.254" y2="0" width="0.254" layer="21"/>
+<wire x1="-0.254" y1="0" x2="-0.254" y2="-0.762" width="0.254" layer="21"/>
+<wire x1="-0.254" y1="0" x2="-0.381" y2="0" width="0.1524" layer="21"/>
+<wire x1="-0.381" y1="0" x2="-0.762" y2="0" width="0.2032" layer="51"/>
+<pad name="1" x="-1.27" y="0" drill="0.8128" diameter="1.6764"/>
+<pad name="2" x="1.27" y="0" drill="0.8128" diameter="1.6764"/>
+<text x="-2.54" y="1.524" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -927,7 +927,7 @@ This library includes USB, pin headers and sockets in different configurations (
 <pad name="2" x="-6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="3" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="4" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<text x="-10.16" y="1.27" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<text x="-10.16" y="1.524" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
 <pad name="5" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="6" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="7" x="6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
@@ -958,17 +958,6 @@ This library includes USB, pin headers and sockets in different configurations (
 <wire x1="8.255" y1="-1.27" x2="7.62" y2="-0.635" width="0.2032" layer="21"/>
 <wire x1="10.16" y1="0.635" x2="10.16" y2="-0.635" width="0.2032" layer="21"/>
 </package>
-<package name="1X08-NOFIRST">
-<pad name="1" x="-8.89" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<pad name="2" x="-6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<pad name="3" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<pad name="4" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<text x="-10.16" y="1.27" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
-<pad name="5" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<pad name="6" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<pad name="7" x="6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<pad name="8" x="8.89" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-</package>
 <package name="1X02-SJ-NO">
 <description>Small solder jumper with no paste layer so it will open after reflow.</description>
 <wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
@@ -977,6 +966,78 @@ This library includes USB, pin headers and sockets in different configurations (
 <smd name="2" x="0.45" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
 <text x="-1.27" y="1.27" size="1.27" layer="51" font="vector" ratio="15">&gt;NAME</text>
 <text x="-1.27" y="1.27" size="1.27" layer="51" font="vector" ratio="15">&gt;NAME</text>
+</package>
+<package name="1X08-NFNS">
+<pad name="1" x="-8.89" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="-6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="4" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-10.16" y="1.27" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<pad name="5" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="6" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="7" x="6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="8" x="8.89" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+</package>
+<package name="1X08-NOFIRST">
+<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-5.08" y1="0.635" x2="-4.445" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-4.445" y1="1.27" x2="-3.175" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-2.54" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="-1.27" x2="-4.445" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-4.445" y1="-1.27" x2="-5.08" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-9.525" y1="1.27" x2="-8.255" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-8.255" y1="1.27" x2="-7.62" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-7.62" y1="-0.635" x2="-8.255" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-7.62" y1="0.635" x2="-6.985" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-6.985" y1="1.27" x2="-5.715" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-5.715" y1="1.27" x2="-5.08" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-5.08" y1="-0.635" x2="-5.715" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-5.715" y1="-1.27" x2="-6.985" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-6.985" y1="-1.27" x2="-7.62" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-10.16" y1="0.635" x2="-10.16" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-9.525" y1="1.27" x2="-10.16" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-10.16" y1="-0.635" x2="-9.525" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-8.255" y1="-1.27" x2="-9.525" y2="-1.27" width="0.2032" layer="21"/>
+<pad name="1" x="-8.89" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="2" x="-6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="3" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="4" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-10.16" y="1.524" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<pad name="5" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="6" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="7" x="6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<pad name="8" x="8.89" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="4.445" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="5.715" y1="1.27" x2="6.985" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="8.255" y1="1.27" x2="9.525" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="4.445" y1="-1.27" x2="3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="6.985" y1="-1.27" x2="5.715" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="9.525" y1="-1.27" x2="8.255" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="-0.635" x2="4.445" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="-0.635" x2="6.985" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="10.16" y1="-0.635" x2="9.525" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="6.985" y1="1.27" x2="7.62" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="9.525" y1="1.27" x2="10.16" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="4.445" y1="1.27" x2="5.08" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="5.08" y1="0.635" x2="5.715" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="7.62" y1="0.635" x2="8.255" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="2.54" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="5.715" y1="-1.27" x2="5.08" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="8.255" y1="-1.27" x2="7.62" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="10.16" y1="0.635" x2="10.16" y2="-0.635" width="0.2032" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1000,7 +1061,7 @@ This library includes USB, pin headers and sockets in different configurations (
 <wire x1="-2.54" y1="10.16" x2="-2.54" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="2.54" y1="-12.7" x2="2.54" y2="10.16" width="0.4064" layer="94"/>
 <wire x1="-2.54" y1="10.16" x2="2.54" y2="10.16" width="0.4064" layer="94"/>
-<text x="-2.54" y="10.795" size="1.27" layer="95" font="vector" ratio="15">&gt;NAME</text>
+<text x="-2.54" y="10.795" size="1.27" layer="95" font="vector" ratio="10">&gt;NAME</text>
 <pin name="1" x="5.08" y="-10.16" visible="pin" length="short" rot="R180"/>
 <pin name="2" x="5.08" y="-7.62" visible="pin" length="short" rot="R180"/>
 <pin name="3" x="5.08" y="-5.08" visible="pin" length="short" rot="R180"/>
@@ -1079,6 +1140,21 @@ This library includes USB, pin headers and sockets in different configurations (
 </technologies>
 </device>
 <device name="" package="1X08">
+<connects>
+<connect gate="M08X1" pin="1" pad="1"/>
+<connect gate="M08X1" pin="2" pad="2"/>
+<connect gate="M08X1" pin="3" pad="3"/>
+<connect gate="M08X1" pin="4" pad="4"/>
+<connect gate="M08X1" pin="5" pad="5"/>
+<connect gate="M08X1" pin="6" pad="6"/>
+<connect gate="M08X1" pin="7" pad="7"/>
+<connect gate="M08X1" pin="8" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NFNS" package="1X08-NFNS">
 <connects>
 <connect gate="M08X1" pin="1" pad="1"/>
 <connect gate="M08X1" pin="2" pad="2"/>
@@ -15868,7 +15944,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <wire x1="7.62" y1="-15.24" x2="7.62" y2="15.24" width="0.4064" layer="94"/>
 <wire x1="7.62" y1="15.24" x2="-7.62" y2="15.24" width="0.4064" layer="94"/>
 <wire x1="-7.62" y1="15.24" x2="-7.62" y2="-15.24" width="0.4064" layer="94"/>
-<text x="-7.62" y="15.24" size="1.524" layer="95" font="vector" ratio="10">&gt;NAME</text>
+<text x="-7.62" y="15.748" size="1.524" layer="95" font="vector" ratio="10">&gt;NAME</text>
 <text x="-7.62" y="-17.78" size="1.524" layer="96" font="vector" ratio="10">&gt;VALUE</text>
 <pin name="DIR" x="-12.7" y="10.16" length="middle" direction="in"/>
 <pin name="A1" x="-12.7" y="5.08" length="middle"/>
@@ -15967,9 +16043,9 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 </class>
 </classes>
 <parts>
-<part name="U1" library="Ai_Displays" deviceset="UG-2864HSWEG01" device="-0.96" value="UG-2864HSWEG01"/>
+<part name="OLED1" library="Ai_Displays" deviceset="UG-2864HSWEG01" device="-0.96" value="UG-2864HSWEG01"/>
 <part name="U$13" library="Ai_Power" deviceset="3V3" device=""/>
-<part name="R3" library="Ai_Passives" deviceset="RES" device="0603" value="390K"/>
+<part name="R2" library="Ai_Passives" deviceset="RES" device="0603" value="390K"/>
 <part name="C3" library="Ai_Passives" deviceset="CAP" device="0603" value="2.2uF"/>
 <part name="C4" library="Ai_Passives" deviceset="CAP" device="0603" value="2.2uF"/>
 <part name="U$19" library="Ai_Power" deviceset="GND" device=""/>
@@ -15999,7 +16075,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <part name="U$6" library="Ai_Power" deviceset="3V3" device=""/>
 <part name="JS2" library="Ai_Connectors" deviceset="1X02-SJ-NO" device=""/>
 <part name="U$7" library="Ai_Power" deviceset="GND" device=""/>
-<part name="U2" library="Ai_Power" deviceset="MIC5205-*" device="" technology="3.3"/>
+<part name="U1" library="Ai_Power" deviceset="MIC5205-*" device="" technology="3.3"/>
 <part name="U$8" library="Ai_Power" deviceset="VIN" device=""/>
 <part name="C1" library="Ai_Passives" deviceset="CAP" device="0603" value="10uF"/>
 <part name="U$9" library="Ai_Power" deviceset="GND" device=""/>
@@ -16017,9 +16093,9 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <plain>
 </plain>
 <instances>
-<instance part="U1" gate="G$1" x="162.56" y="116.84"/>
+<instance part="OLED1" gate="G$1" x="162.56" y="116.84"/>
 <instance part="U$13" gate="G$1" x="72.39" y="154.94"/>
-<instance part="R3" gate="G$1" x="128.27" y="88.9"/>
+<instance part="R2" gate="G$1" x="128.27" y="88.9"/>
 <instance part="C3" gate="G$1" x="124.46" y="149.86" rot="R90"/>
 <instance part="C4" gate="G$1" x="124.46" y="144.78" rot="R90"/>
 <instance part="U$19" gate="GND" x="134.62" y="73.66"/>
@@ -16047,7 +16123,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <instance part="U$6" gate="G$1" x="106.68" y="140.97"/>
 <instance part="JS2" gate="1" x="106.68" y="134.62" rot="R90"/>
 <instance part="U$7" gate="GND" x="106.68" y="110.49"/>
-<instance part="U2" gate="G$1" x="63.5" y="85.09"/>
+<instance part="U1" gate="G$1" x="63.5" y="85.09"/>
 <instance part="U$8" gate="G$1" x="45.72" y="92.71"/>
 <instance part="C1" gate="G$1" x="45.72" y="85.09" rot="R180"/>
 <instance part="U$9" gate="GND" x="49.53" y="76.2"/>
@@ -16067,7 +16143,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <segment>
 <wire x1="137.16" y1="109.22" x2="133.35" y2="109.22" width="0.1524" layer="91"/>
 <label x="133.35" y="109.22" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D0/SPI_SCLK/I2C_SCK"/>
+<pinref part="OLED1" gate="G$1" pin="D0/SPI_SCLK/I2C_SCK"/>
 </segment>
 <segment>
 <label x="80.01" y="54.61" size="1.27" layer="95" font="vector" ratio="10" rot="MR180" xref="yes"/>
@@ -16079,7 +16155,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <segment>
 <wire x1="137.16" y1="106.68" x2="134.62" y2="106.68" width="0.1524" layer="91"/>
 <label x="133.35" y="106.68" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="D1/SPI_SDIN/I2C_SDA"/>
+<pinref part="OLED1" gate="G$1" pin="D1/SPI_SDIN/I2C_SDA"/>
 <pinref part="JS1" gate="1" pin="1"/>
 <wire x1="134.62" y1="106.68" x2="133.35" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="120.65" y1="102.87" x2="120.65" y2="104.14" width="0.1524" layer="91"/>
@@ -16103,7 +16179,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <segment>
 <wire x1="137.16" y1="78.74" x2="134.62" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="78.74" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="NC(GND)@2"/>
+<pinref part="OLED1" gate="G$1" pin="NC(GND)@2"/>
 <pinref part="U$19" gate="GND" pin="GND"/>
 </segment>
 <segment>
@@ -16118,41 +16194,41 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <junction x="110.49" y="83.82"/>
 <junction x="110.49" y="86.36"/>
 <junction x="110.49" y="81.28"/>
-<pinref part="U1" gate="G$1" pin="VLSS"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="OLED1" gate="G$1" pin="VLSS"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="C8" gate="G$1" pin="1"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="U$21" gate="GND" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="R/W"/>
+<pinref part="OLED1" gate="G$1" pin="R/W"/>
 <wire x1="137.16" y1="114.3" x2="110.49" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="110.49" y1="114.3" x2="110.49" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="E/RD"/>
+<pinref part="OLED1" gate="G$1" pin="E/RD"/>
 <wire x1="137.16" y1="111.76" x2="110.49" y2="111.76" width="0.1524" layer="91"/>
 <junction x="110.49" y="111.76"/>
 <wire x1="137.16" y1="124.46" x2="110.49" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="129.54" x2="110.49" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="BS2"/>
-<pinref part="U1" gate="G$1" pin="BS0"/>
+<pinref part="OLED1" gate="G$1" pin="BS2"/>
+<pinref part="OLED1" gate="G$1" pin="BS0"/>
 <junction x="110.49" y="124.46"/>
 <wire x1="110.49" y1="129.54" x2="110.49" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="110.49" y1="114.3" x2="110.49" y2="124.46" width="0.1524" layer="91"/>
 <junction x="110.49" y="114.3"/>
 <wire x1="110.49" y1="88.9" x2="110.49" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="D4"/>
+<pinref part="OLED1" gate="G$1" pin="D4"/>
 <wire x1="110.49" y1="99.06" x2="110.49" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="99.06" x2="132.08" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="D3"/>
+<pinref part="OLED1" gate="G$1" pin="D3"/>
 <wire x1="137.16" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="101.6" x2="132.08" y2="99.06" width="0.1524" layer="91"/>
 <junction x="132.08" y="99.06"/>
-<pinref part="U1" gate="G$1" pin="D5"/>
+<pinref part="OLED1" gate="G$1" pin="D5"/>
 <wire x1="137.16" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="96.52" x2="132.08" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="D6"/>
+<pinref part="OLED1" gate="G$1" pin="D6"/>
 <wire x1="137.16" y1="93.98" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="93.98" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
 <junction x="132.08" y="96.52"/>
-<pinref part="U1" gate="G$1" pin="D7"/>
+<pinref part="OLED1" gate="G$1" pin="D7"/>
 <wire x1="137.16" y1="91.44" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="91.44" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
 <junction x="132.08" y="93.98"/>
@@ -16166,11 +16242,11 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <wire x1="121.92" y1="139.7" x2="118.11" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="118.11" y1="139.7" x2="118.11" y2="134.62" width="0.1524" layer="91"/>
 <junction x="118.11" y="134.62"/>
-<pinref part="U1" gate="G$1" pin="VSS"/>
+<pinref part="OLED1" gate="G$1" pin="VSS"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="110.49" y1="134.62" x2="118.11" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="NC(GND)@1"/>
+<pinref part="OLED1" gate="G$1" pin="NC(GND)@1"/>
 <wire x1="137.16" y1="152.4" x2="110.49" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="110.49" y1="152.4" x2="110.49" y2="134.62" width="0.1524" layer="91"/>
 <junction x="110.49" y="134.62"/>
@@ -16188,7 +16264,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <wire x1="106.68" y1="113.03" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
 <pinref part="U$9" gate="GND" pin="GND"/>
 <wire x1="54.61" y1="85.09" x2="49.53" y2="85.09" width="0.1524" layer="91"/>
 <wire x1="49.53" y1="85.09" x2="49.53" y2="80.01" width="0.1524" layer="91"/>
@@ -16217,7 +16293,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <segment>
 <wire x1="137.16" y1="121.92" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
 <label x="134.62" y="121.92" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="!CS"/>
+<pinref part="OLED1" gate="G$1" pin="!CS"/>
 </segment>
 <segment>
 <label x="80.01" y="46.99" size="1.27" layer="95" font="vector" ratio="10" rot="MR180" xref="yes"/>
@@ -16229,7 +16305,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <segment>
 <wire x1="137.16" y1="119.38" x2="134.62" y2="119.38" width="0.1524" layer="91"/>
 <label x="134.62" y="119.38" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="!RST"/>
+<pinref part="OLED1" gate="G$1" pin="!RST"/>
 </segment>
 <segment>
 <label x="80.01" y="49.53" size="1.27" layer="95" font="vector" ratio="10" rot="MR180" xref="yes"/>
@@ -16241,7 +16317,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <segment>
 <wire x1="137.16" y1="116.84" x2="134.62" y2="116.84" width="0.1524" layer="91"/>
 <label x="134.62" y="116.84" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="DC/I2C_SA0"/>
+<pinref part="OLED1" gate="G$1" pin="DC/I2C_SA0"/>
 </segment>
 <segment>
 <label x="80.01" y="52.07" size="1.27" layer="95" font="vector" ratio="10" rot="MR180" xref="yes"/>
@@ -16252,14 +16328,14 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <net name="N$3" class="0">
 <segment>
 <wire x1="137.16" y1="88.9" x2="133.35" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="IREF"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="OLED1" gate="G$1" pin="IREF"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <wire x1="137.16" y1="149.86" x2="129.54" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="C2P"/>
+<pinref part="OLED1" gate="G$1" pin="C2P"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -16269,13 +16345,13 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <wire x1="118.11" y1="149.86" x2="118.11" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="118.11" y1="147.32" x2="137.16" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="C2N"/>
+<pinref part="OLED1" gate="G$1" pin="C2N"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <wire x1="137.16" y1="144.78" x2="129.54" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="C1P"/>
+<pinref part="OLED1" gate="G$1" pin="C1P"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -16285,29 +16361,29 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <wire x1="118.11" y1="144.78" x2="118.11" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="118.11" y1="142.24" x2="137.16" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="C1N"/>
+<pinref part="OLED1" gate="G$1" pin="C1N"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <wire x1="137.16" y1="83.82" x2="123.19" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VCC"/>
+<pinref part="OLED1" gate="G$1" pin="VCC"/>
 <pinref part="C8" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <wire x1="137.16" y1="86.36" x2="129.54" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VCOMH"/>
+<pinref part="OLED1" gate="G$1" pin="VCOMH"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="3V3" class="0">
 <segment>
 <wire x1="137.16" y1="139.7" x2="134.62" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VBAT"/>
+<pinref part="OLED1" gate="G$1" pin="VBAT"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="U1" gate="G$1" pin="VDD"/>
+<pinref part="OLED1" gate="G$1" pin="VDD"/>
 <wire x1="134.62" y1="139.7" x2="132.08" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="132.08" x2="134.62" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -16337,7 +16413,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="U2" gate="G$1" pin="OUT"/>
+<pinref part="U1" gate="G$1" pin="OUT"/>
 <wire x1="74.93" y1="90.17" x2="72.39" y2="90.17" width="0.1524" layer="91"/>
 <wire x1="74.93" y1="90.17" x2="77.47" y2="90.17" width="0.1524" layer="91"/>
 <wire x1="77.47" y1="90.17" x2="77.47" y2="92.71" width="0.1524" layer="91"/>
@@ -16454,14 +16530,14 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <pinref part="U$5" gate="G$1" pin="VIN"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IN"/>
+<pinref part="U1" gate="G$1" pin="IN"/>
 <pinref part="U$8" gate="G$1" pin="VIN"/>
 <wire x1="54.61" y1="90.17" x2="52.07" y2="90.17" width="0.1524" layer="91"/>
 <wire x1="52.07" y1="90.17" x2="45.72" y2="90.17" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="90.17" x2="45.72" y2="92.71" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <junction x="45.72" y="90.17"/>
-<pinref part="U2" gate="G$1" pin="EN"/>
+<pinref part="U1" gate="G$1" pin="EN"/>
 <wire x1="54.61" y1="80.01" x2="52.07" y2="80.01" width="0.1524" layer="91"/>
 <wire x1="52.07" y1="80.01" x2="52.07" y2="90.17" width="0.1524" layer="91"/>
 <junction x="52.07" y="90.17"/>
@@ -16470,7 +16546,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 <net name="N$8" class="0">
 <segment>
 <pinref part="JS1" gate="1" pin="2"/>
-<pinref part="U1" gate="G$1" pin="D2/I2C_SDA"/>
+<pinref part="OLED1" gate="G$1" pin="D2/I2C_SDA"/>
 <wire x1="130.81" y1="102.87" x2="135.89" y2="102.87" width="0.1524" layer="91"/>
 <wire x1="135.89" y1="102.87" x2="135.89" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="135.89" y1="104.14" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
@@ -16478,7 +16554,7 @@ This library includes digital and analog Integrated Circuits such as MCUs, shift
 </net>
 <net name="I2C_EN" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="BS1"/>
+<pinref part="OLED1" gate="G$1" pin="BS1"/>
 <label x="104.14" y="127" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 <pinref part="JS2" gate="1" pin="1"/>
 <pinref part="R1" gate="G$1" pin="2"/>

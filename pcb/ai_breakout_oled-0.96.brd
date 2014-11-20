@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -64,7 +64,7 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="yes"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
@@ -374,7 +374,7 @@ This library includes USB, pin headers and sockets in different configurations (
 <pad name="2" x="-6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="3" x="-3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="4" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<text x="-10.16" y="1.27" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<text x="-10.16" y="1.524" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
 <pad name="5" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="6" x="3.81" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="7" x="6.35" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
@@ -4232,6 +4232,9 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -4298,8 +4301,8 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U1" library="Ai_Displays" package="UG-2864HSWEG01_0.96_WRAP" value="UG-2864HSWEG01" x="16.51" y="13.208" smashed="yes"/>
-<element name="R3" library="Ai_Passives" package="RES-0603" value="390K" x="23.495" y="16.129" smashed="yes" rot="MR270">
+<element name="OLED1" library="Ai_Displays" package="UG-2864HSWEG01_0.96_WRAP" value="UG-2864HSWEG01" x="16.51" y="13.208" smashed="yes"/>
+<element name="R2" library="Ai_Passives" package="RES-0603" value="390K" x="23.495" y="16.129" smashed="yes" rot="MR270">
 <attribute name="NAME" x="23.876" y="19.304" size="0.8128" layer="26" font="vector" ratio="10" rot="MR270"/>
 </element>
 <element name="C3" library="Ai_Passives" package="CAP-0603" value="2.2uF" x="6.223" y="16.129" smashed="yes" rot="MR270">
@@ -4337,7 +4340,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="17.2212" y="16.002" size="1.27" layer="52" font="vector" ratio="15" rot="MR90"/>
 <attribute name="NAME" x="17.2212" y="16.002" size="1.27" layer="52" font="vector" ratio="15" rot="MR90"/>
 </element>
-<element name="U2" library="Ai_Power" package="SOT23-5" value="MIC5205-3.3" x="6.858" y="29.591" smashed="yes" rot="MR180">
+<element name="U1" library="Ai_Power" package="SOT23-5" value="MIC5205-3.3" x="6.858" y="29.591" smashed="yes" rot="MR180">
 <attribute name="NAME" x="5.969" y="32.639" size="0.8128" layer="26" font="vector" ratio="10" rot="MR180"/>
 </element>
 <element name="C1" library="Ai_Passives" package="CAP-0603" value="10uF" x="9.271" y="29.718" smashed="yes" rot="MR90">
@@ -4354,7 +4357,7 @@ design rules under a new name.</description>
 </elements>
 <signals>
 <signal name="D0/SCLK/SCK_3V3">
-<contactref element="U1" pad="18"/>
+<contactref element="OLED1" pad="18"/>
 <contactref element="IC1" pad="17"/>
 <wire x1="18.26" y1="12.008" x2="18.26" y2="13.998" width="0.4064" layer="16"/>
 <wire x1="18.26" y1="13.998" x2="18.0848" y2="14.1478" width="0.4064" layer="16"/>
@@ -4369,7 +4372,7 @@ design rules under a new name.</description>
 <wire x1="22.987" y1="20.828" x2="23.368" y2="20.447" width="0.4064" layer="16"/>
 </signal>
 <signal name="D1/MOSI/SDA1_3V3">
-<contactref element="U1" pad="19"/>
+<contactref element="OLED1" pad="19"/>
 <contactref element="JS1" pad="1"/>
 <contactref element="IC1" pad="18"/>
 <wire x1="18.96" y1="12.008" x2="18.96" y2="16.097" width="0.4064" layer="16"/>
@@ -4382,9 +4385,9 @@ design rules under a new name.</description>
 <wire x1="19.489" y1="16.764" x2="19.558" y2="16.822" width="0.4064" layer="16"/>
 </signal>
 <signal name="GND" airwireshidden="yes">
-<contactref element="U1" pad="30"/>
-<contactref element="U1" pad="29"/>
-<contactref element="R3" pad="1"/>
+<contactref element="OLED1" pad="30"/>
+<contactref element="OLED1" pad="29"/>
+<contactref element="R2" pad="1"/>
 <contactref element="C8" pad="1"/>
 <contactref element="C7" pad="1"/>
 <polygon width="0.3302" layer="1" spacing="0.254" isolate="0.254">
@@ -4399,23 +4402,23 @@ design rules under a new name.</description>
 <vertex x="33.02" y="33.02"/>
 <vertex x="33.02" y="0"/>
 </polygon>
-<contactref element="U1" pad="16"/>
-<contactref element="U1" pad="17"/>
-<contactref element="U1" pad="12"/>
-<contactref element="U1" pad="10"/>
-<contactref element="U1" pad="22"/>
-<contactref element="U1" pad="21"/>
-<contactref element="U1" pad="23"/>
-<contactref element="U1" pad="24"/>
-<contactref element="U1" pad="25"/>
-<contactref element="U1" pad="8"/>
+<contactref element="OLED1" pad="16"/>
+<contactref element="OLED1" pad="17"/>
+<contactref element="OLED1" pad="12"/>
+<contactref element="OLED1" pad="10"/>
+<contactref element="OLED1" pad="22"/>
+<contactref element="OLED1" pad="21"/>
+<contactref element="OLED1" pad="23"/>
+<contactref element="OLED1" pad="24"/>
+<contactref element="OLED1" pad="25"/>
+<contactref element="OLED1" pad="8"/>
 <contactref element="C6" pad="1"/>
 <contactref element="C5" pad="1"/>
-<contactref element="U1" pad="1"/>
+<contactref element="OLED1" pad="1"/>
 <contactref element="J2" pad="8"/>
 <contactref element="J1" pad="8"/>
 <contactref element="R1" pad="1"/>
-<contactref element="U2" pad="2"/>
+<contactref element="U1" pad="2"/>
 <contactref element="C1" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="IC1" pad="10"/>
@@ -4430,7 +4433,7 @@ design rules under a new name.</description>
 <wire x1="12.192" y1="17.029" x2="14.1986" y2="17.029" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="CS_3V3">
-<contactref element="U1" pad="13"/>
+<contactref element="OLED1" pad="13"/>
 <contactref element="IC1" pad="14"/>
 <wire x1="14.76" y1="12.008" x2="14.76" y2="13.998" width="0.4064" layer="16"/>
 <wire x1="19.637" y1="23.327" x2="17.612" y2="23.327" width="0.4064" layer="16"/>
@@ -4439,7 +4442,7 @@ design rules under a new name.</description>
 <wire x1="14.76" y1="13.998" x2="17.018" y2="16.256" width="0.4064" layer="16"/>
 </signal>
 <signal name="RST_3V3">
-<contactref element="U1" pad="14"/>
+<contactref element="OLED1" pad="14"/>
 <contactref element="IC1" pad="15"/>
 <wire x1="15.46" y1="12.008" x2="15.46" y2="13.682" width="0.4064" layer="16"/>
 <wire x1="17.653" y1="15.875" x2="17.653" y2="22.225" width="0.4064" layer="16"/>
@@ -4448,7 +4451,7 @@ design rules under a new name.</description>
 <wire x1="15.46" y1="13.682" x2="17.653" y2="15.875" width="0.4064" layer="16"/>
 </signal>
 <signal name="DC/SA0_3V3">
-<contactref element="U1" pad="15"/>
+<contactref element="OLED1" pad="15"/>
 <contactref element="IC1" pad="16"/>
 <wire x1="16.16" y1="12.008" x2="16.16" y2="13.2136" width="0.4064" layer="16"/>
 <wire x1="16.16" y1="13.2136" x2="16.9926" y2="13.9446" width="0.4064" layer="16"/>
@@ -4463,13 +4466,13 @@ design rules under a new name.</description>
 <wire x1="22.042" y1="22.027" x2="22.225" y2="21.844" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$3">
-<contactref element="U1" pad="26"/>
-<contactref element="R3" pad="2"/>
+<contactref element="OLED1" pad="26"/>
+<contactref element="R2" pad="2"/>
 <wire x1="23.86" y1="12.008" x2="23.86" y2="14.864" width="0.4064" layer="16"/>
 <wire x1="23.86" y1="14.864" x2="23.495" y2="15.229" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$4">
-<contactref element="U1" pad="2"/>
+<contactref element="OLED1" pad="2"/>
 <contactref element="C3" pad="2"/>
 <wire x1="7.06" y1="12.008" x2="7.06" y2="13.26" width="0.4064" layer="16"/>
 <wire x1="7.06" y1="13.26" x2="6.223" y2="14.097" width="0.4064" layer="16"/>
@@ -4477,21 +4480,21 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$5">
 <contactref element="C3" pad="1"/>
-<contactref element="U1" pad="3"/>
+<contactref element="OLED1" pad="3"/>
 <wire x1="7.76" y1="12.008" x2="7.76" y2="13.703" width="0.4064" layer="16"/>
 <wire x1="7.76" y1="13.703" x2="7.239" y2="14.224" width="0.4064" layer="16"/>
 <wire x1="7.239" y1="14.224" x2="7.239" y2="16.267" width="0.4064" layer="16"/>
 <wire x1="7.239" y1="16.267" x2="6.223" y2="17.029" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$6">
-<contactref element="U1" pad="4"/>
+<contactref element="OLED1" pad="4"/>
 <contactref element="C4" pad="2"/>
 <wire x1="8.46" y1="12.008" x2="8.46" y2="15.151" width="0.4064" layer="16"/>
 <wire x1="8.46" y1="15.151" x2="8.382" y2="15.229" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$7">
 <contactref element="C4" pad="1"/>
-<contactref element="U1" pad="5"/>
+<contactref element="OLED1" pad="5"/>
 <wire x1="8.382" y1="17.029" x2="9.26" y2="17.029" width="0.4064" layer="16"/>
 <wire x1="9.26" y1="17.029" x2="9.398" y2="16.891" width="0.4064" layer="16"/>
 <wire x1="9.398" y1="16.891" x2="9.398" y2="13.843" width="0.4064" layer="16"/>
@@ -4500,7 +4503,7 @@ design rules under a new name.</description>
 <wire x1="9.144" y1="12.024" x2="9.16" y2="12.008" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$11">
-<contactref element="U1" pad="28"/>
+<contactref element="OLED1" pad="28"/>
 <contactref element="C8" pad="2"/>
 <wire x1="25.26" y1="12.008" x2="25.26" y2="13.703" width="0.4064" layer="16"/>
 <wire x1="25.26" y1="13.703" x2="25.527" y2="13.97" width="0.4064" layer="16"/>
@@ -4509,21 +4512,21 @@ design rules under a new name.</description>
 <wire x1="26.797" y1="14.224" x2="26.797" y2="15.229" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$12">
-<contactref element="U1" pad="27"/>
+<contactref element="OLED1" pad="27"/>
 <contactref element="C7" pad="2"/>
 <wire x1="24.56" y1="12.008" x2="24.56" y2="14.643" width="0.4064" layer="16"/>
 <wire x1="24.56" y1="14.643" x2="25.146" y2="15.229" width="0.4064" layer="16"/>
 </signal>
 <signal name="3V3">
-<contactref element="U1" pad="6"/>
+<contactref element="OLED1" pad="6"/>
 <contactref element="C5" pad="2"/>
-<contactref element="U1" pad="9"/>
+<contactref element="OLED1" pad="9"/>
 <contactref element="C6" pad="2"/>
 <contactref element="J2" pad="6"/>
 <contactref element="J1" pad="6"/>
 <contactref element="JS2" pad="2"/>
 <contactref element="C2" pad="2"/>
-<contactref element="U2" pad="5"/>
+<contactref element="U1" pad="5"/>
 <contactref element="IC1" pad="20"/>
 <contactref element="IC1" pad="1"/>
 <wire x1="11.96" y1="12.008" x2="11.96" y2="14.997" width="0.4064" layer="16"/>
@@ -4658,9 +4661,9 @@ design rules under a new name.</description>
 <signal name="VIN">
 <contactref element="J2" pad="7"/>
 <contactref element="J1" pad="7"/>
-<contactref element="U2" pad="1"/>
+<contactref element="U1" pad="1"/>
 <contactref element="C1" pad="2"/>
-<contactref element="U2" pad="3"/>
+<contactref element="U1" pad="3"/>
 <wire x1="5.908" y1="30.8911" x2="5.908" y2="31.689" width="0.4064" layer="16"/>
 <wire x1="5.908" y1="31.689" x2="6.223" y2="32.004" width="0.4064" layer="16"/>
 <wire x1="6.223" y1="32.004" x2="7.493" y2="32.004" width="0.4064" layer="16"/>
@@ -4679,7 +4682,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$8">
 <contactref element="JS1" pad="2"/>
-<contactref element="U1" pad="20"/>
+<contactref element="OLED1" pad="20"/>
 <wire x1="19.66" y1="12.008" x2="19.66" y2="14.859" width="0.4064" layer="16"/>
 <wire x1="19.66" y1="14.859" x2="19.66" y2="15.781" width="0" layer="19" extent="1-16"/>
 <wire x1="20.008" y1="15.621" x2="19.66" y2="15.781" width="0" layer="19" extent="1-16"/>
@@ -4689,7 +4692,7 @@ design rules under a new name.</description>
 <wire x1="20.701" y1="15.9" x2="19.66" y2="14.859" width="0.4064" layer="16"/>
 </signal>
 <signal name="I2C_EN">
-<contactref element="U1" pad="11"/>
+<contactref element="OLED1" pad="11"/>
 <contactref element="JS2" pad="1"/>
 <contactref element="R1" pad="2"/>
 <wire x1="13.36" y1="12.008" x2="13.36" y2="14.365" width="0.4064" layer="16"/>
